@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quantico", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* hero-section */
+.hero-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.hero-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: absolute;
+}
+
+.slogan {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.slogan button {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgb(0, 0, 0));
+    color: #fff;
+    font-size: 1.2rem;
+    border: 0;
+}
+
+.slogan h2 {
+    font-size: 1.5rem;
+}
+
+/* bg-img */
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgb(0, 0, 0)),
+        url("images/img14.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* about*/
+.about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.img-grid div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.lists {
+    position: absolute;
+    top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lists h3 {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.lists p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.lists div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.collections {
+    left: 10%;
+}
+
+.services {
+    right: 10%;
+}
+
+/* loader */
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #000;
+}
+
+.loader h1 {
+    font-size: bold;
+    line-height: 2rem;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.1) 33.333%,
+        rgba(255, 255, 255, 1) 33.333%,
+        rgba(255, 255, 255, 1) 66.666%,
+        rgba(255, 255, 255, 0.5) 66.666%,
+        rgba(255, 255, 255, 0.5) 100%
+    );
+    background-size: 100% 300%;
+    background-position: 0% 0%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+/*styles for small devices*/
+@media (max-width: 1000px) {
+    /* hero-section */
+    .hero-section .hero-img {
+        width: 80px;
+        height: 80px;
+    }
+    nav {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1rem;
+        font-weight: bold;
+    }
+
+    .slogan {
+        gap: 1rem;
+    }
+
+    /* about */
+    .img-grid {
+        gap: 10px;
+    }
+
+    .img-grid div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .lists {
+        top: 2px;
+        bottom: 2px;
+        justify-content: space-between;
+    }
+
+    .lists div {
+        display: block;
+    }
+
+    .collections {
+        left: 1rem;
+    }
+    .services {
+        right: 1rem;
+    }
+    .lists h3 {
+        font-size: 1rem;
+        margin-bottom: 3px;
+    }
+    .lists p {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+}
